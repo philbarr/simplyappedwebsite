@@ -1,4 +1,4 @@
-!!!
+doctype html
 html
   -var menu = { 'Home': '/index.html', 'Contact': '/contact.html', 'Games': '/games.simplyapped.com/index.html' };
   -var selected = 'Home';
@@ -26,7 +26,7 @@ html
               span.icon-bar
               span.icon-bar
             a.brand.navbar-left(href='/') 
-              img.img-responsive(src="/img/logo_with_text.png")
+              img.img-responsive(src="img/logo_with_text.png")
           .navbar-collapse.collapse
             ul.nav.navbar-nav.navbar-right
               each val, key in menu
@@ -37,12 +37,9 @@ html
                   li
                     a(href=val, title=key)= key
     
-    != yield
+    block content
 
     //- add other scripts through require.js, not here
     script(src="https://code.jquery.com/jquery.js")
     script(src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js")
-    
-    //- this must be included for live reload to work in developement
-    //- it will be automatically ignored when deployed
-    != livereload
+  script(data-main="js/main", src="//cdnjs.cloudflare.com/ajax/libs/require.js/2.1.9/require.min.js")

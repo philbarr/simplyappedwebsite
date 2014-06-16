@@ -1,39 +1,42 @@
--var selected = 'Home';
-#whatwedo
-  .container
-    .row
-      h1.centertext.heading#ibuild I build quality applications for
-    .row
-      .col-sm-4.col-md-4
-        img.img-responsive.centercontents(src="/img/circle-mobiledev.png")
-        p.centertext.devtype MOBILE
-      .col-sm-4.col-md-4
-        img.img-responsive.centercontents(src="/img/circle-webdev.png")
-        p.centertext.devtype WEB &amp; DESKTOP
-      .col-sm-4.col-md-4
-        img.img-responsive.centercontents(src="/img/circle-cloud.png")
-        p.centertext.devtype CLOUD
-#process
-  .arrow-down
-  .container.centercontents
-    .row.theprocess
-      h1.centertext.heading.theprocess the process
-    .centercontents
-      span.fa-stack.fa-lg
-        i.fa.fa-square-o.fa-stack-2x
-          i.fa.fa-twitter.fa-stack-1x
-        | fa-twitter on fa-square-o
+extends layout
+
+block content
+  -var selected = 'Home';
+  #whatwedo
+    .container
+      .row
+        h1.centertext.heading#ibuild building quality applications for
+      .row
+        .col-sm-4.col-md-4
+          img.img-responsive.centercontents(src="/img/circle-mobiledev.png")
+          p.centertext.devtype MOBILE
+        .col-sm-4.col-md-4
+          img.img-responsive.centercontents(src="/img/circle-webdev.png")
+          p.centertext.devtype WEB &amp; DESKTOP
+        .col-sm-4.col-md-4
+          img.img-responsive.centercontents(src="/img/circle-cloud.png")
+          p.centertext.devtype CLOUD
+  #process
+    .arrow-down
+    .container.centercontents
+      .row.theprocess
+        h1.centertext.heading.theprocess the process
+      .centercontents
+        span.fa-stack.fa-lg
+          i.fa.fa-square-o.fa-stack-2x
+            i.fa.fa-twitter.fa-stack-1x
+          | fa-twitter on fa-square-o
+          br
+        span.fa-stack.fa-lg
+            i.fa.fa-circle.fa-stack-2x
+            i.fa.fa-flag.fa-stack-1x.fa-inverse
+          | fa-flag on fa-circle
         br
-      span.fa-stack.fa-lg
-          i.fa.fa-circle.fa-stack-2x
-          i.fa.fa-flag.fa-stack-1x.fa-inverse
-        | fa-flag on fa-circle
-      br
-      span.fa-stack.fa-lg
-          i.fa.fa-square.fa-stack-2x
-          i.fa.fa-terminal.fa-stack-1x.fa-inverse
-        | fa-terminal on fa-square
-      br
-      span.fa-stack.fa-lg
-          i.fa.fa-camera.fa-stack-1x
-          i.fa.fa-ban.fa-stack-2x.text-danger
+        span.fa-stack.fa-lg
+            i.fa.fa-square.fa-stack-2x
+            i.fa.fa-terminal.fa-stack-1x.fa-inverse
+          | fa-terminal on fa-square
+        br
+        span.fa-stack.fa-lg
+            i.fa.fa-camera.fa-stack-1x
+            i.fa.fa-ban.fa-stack-2x.text-danger
