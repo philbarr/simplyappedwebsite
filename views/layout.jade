@@ -1,0 +1,48 @@
+!!!
+html
+  -var menu = { 'Home': '/index.html', 'Contact': '/contact.html', 'Games': '/games.simplyapped.com/index.html' };
+  -var selected = 'Home';
+  head
+    meta(charset='utf8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge,chrome=1')
+    meta(name='viewport', content='width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no')
+    meta(name='description', content='Simply Apped creates quality software for companies of all sizes.')
+    meta(name='author', content='Simply Apped')
+    meta(content='yes', name='apple-mobile-web-app-capable')
+    meta(content='black-translucent', name='apple-mobile-web-app-status-bar-style')
+    title Simply Apped
+    
+    link(rel='stylesheet', href='//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css')
+    link(rel='stylesheet', href='//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css')
+    link(rel='stylesheet', href='/css/main.css')
+  body
+    .navbar-wrapper
+      .navbar.navbar-default.navbar-fixed-top(role='navigation')
+        .container#header
+          .navbar-header
+            button.navbar-toggle(type='button', data-toggle='collapse', data-target='.navbar-collapse')
+              span.sr-only Toggle navigation
+              span.icon-bar
+              span.icon-bar
+              span.icon-bar
+            a.brand.navbar-left(href='/') 
+              img.img-responsive(src="/img/logo_with_text.png")
+          .navbar-collapse.collapse
+            ul.nav.navbar-nav.navbar-right
+              each val, key in menu
+                if selected === key
+                  li.active
+                    a(href=val, title=key)= key
+                else
+                  li
+                    a(href=val, title=key)= key
+    
+    != yield
+
+    //- add other scripts through require.js, not here
+    script(src="https://code.jquery.com/jquery.js")
+    script(src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js")
+    
+    //- this must be included for live reload to work in developement
+    //- it will be automatically ignored when deployed
+    != livereload
