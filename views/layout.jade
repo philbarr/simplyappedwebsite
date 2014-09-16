@@ -1,6 +1,6 @@
 doctype html
 html
-  -var menu = { 'Home': '/index.html', 'Contact': '/contact.html', 'Games': '/games.simplyapped.com/index.html' };
+  -var menu = { 'Home': '/index.html', 'CV': '/cv.html', 'Apps': 'https://play.google.com/store/apps/developer?id=Simply+Apped' };
   -var selected = 'Home';
   head
     meta(charset='utf8')
@@ -11,7 +11,7 @@ html
     meta(content='yes', name='apple-mobile-web-app-capable')
     meta(content='black-translucent', name='apple-mobile-web-app-status-bar-style')
     title Simply Apped
-    
+
     link(rel='stylesheet', href='//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css')
     link(rel='stylesheet', href='//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css')
     link(rel='stylesheet', href='css/main.css')
@@ -25,7 +25,7 @@ html
               span.icon-bar
               span.icon-bar
               span.icon-bar
-            a.brand.navbar-left(href='/') 
+            a.brand.navbar-left(href='/')
               img.img-responsive.largescreen(src="img/logo_with_text.png")
               img.img-responsive.smallscreen(src="img/logo_with_text_small.png")
           .navbar-collapse.collapse
@@ -37,7 +37,7 @@ html
                 else
                   li
                     a(href=val, title=key)= key
-    
+
     block content
 
     //- add other scripts through require.js, not here

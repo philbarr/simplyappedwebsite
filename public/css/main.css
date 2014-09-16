@@ -24,7 +24,7 @@
 }
 
 /*apply to all views*/
-body { 
+body {
 	background-color: #4498DB;
 	padding-top: 2em;
 	color: #f2f2f2;
@@ -52,8 +52,8 @@ body {
 }
 
 .arrow-down {
-  width: 0; 
-  height: 0; 
+  width: 0;
+  height: 0;
   margin:auto;
   border-left: 5em solid transparent;
   border-right: 5em solid transparent;
@@ -78,7 +78,7 @@ body {
 	font-size: 3em;
 }
 
-/*home view*/ 
+/*home view*/
 #whatwedo{
 	background-color: #4498DB;
 	margin:0;
@@ -86,7 +86,7 @@ body {
 }
 
 #ibuild{
-  color: #f2f2f2; 
+  color: #f2f2f2;
 }
 
 .devtype{
@@ -125,7 +125,7 @@ p {
   border-radius: 10px;
 }
 
-img.smallscreen { 
+img.smallscreen {
 	display: none;
 }
 
@@ -134,10 +134,10 @@ img.smallscreen {
 }
 
 @media only screen and (max-width: 640px) {
-	img.largescreen{ 
-		display: none; 
+	img.largescreen{
+		display: none;
 	}
-	img.smallscreen { 
-		display: inline; 
+	img.smallscreen {
+		display: inline;
 	}
 }
