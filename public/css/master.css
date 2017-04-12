@@ -1,4 +1,14 @@
-article: , aside, details, figcaption, figure, footer, header, hgroup, main, nav, section;
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section,
 summary {
   display: block;
 }
@@ -60,6 +70,17 @@ h5 {
 h6 {
   font-size: 0.67em;
   margin: 2.33em 0;
+}
+h1 small,
+h2 small,
+h3 small,
+h4 small,
+h5 small,
+h6 small,
+p small,
+blockquote small,
+figcaption small {
+  line-height: 1;
 }
 abbr[title] {
   border-bottom: 1px dotted;
@@ -200,8 +221,7 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
-html,
-body {
+html {
   font-size: 16px;
   font-size: 100%;
 }
