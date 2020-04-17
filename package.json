@@ -1,0 +1,36 @@
+{
+  "name": "simplyappedwebsite",
+  "version": "1.0.0",
+  "description": "Simply Apped Website",
+  "private": true,
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack --config ./config/webpack.dev.config.js --progress",
+    "watch": "webpack --progress --watch --config ./config/webpack.dev.config.js --mode=development",
+    "prod": "webpack --config ./config/webpack.prod.config.js",
+    "start": "webpack-dev-server",
+    "deploy": "gh-pages -d dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/philbarr/simplyappedwebsite.git"
+  },
+  "author": "Philip Barr",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/philbarr/simplyappedwebsite/issues"
+  },
+  "homepage": "https://github.com/philbarr/simplyappedwebsite#readme",
+  "dependencies": {
+    "bootstrap": "^4.4.1",
+    "lodash": "^4.17.15"
+  },
+  "devDependencies": {
+    "css-loader": "^3.5.2",
+    "file-loader": "^6.0.0",
+    "style-loader": "^1.1.4",
+    "webpack": "^4.42.1",
+    "webpack-cli": "^3.3.11",
+    "webpack-dev-server": "^3.10.3"
+  }
+}
