@@ -9,7 +9,7 @@ module.exports = {
   entry: './src/js/index.js',
   output: {
     filename: 'bundle.js',
-    path: path.resolve(__dirname, relativeDirs, 'dist'),
+    path: path.resolve(__dirname, relativeDirs, 'dist/', 'dev/'),
 
   },
   plugins: [
@@ -43,7 +43,7 @@ module.exports = {
     ],
   },
   devServer: {
-    contentBase: path.join(__dirname, 'dist'),
+    contentBase: path.join(__dirname, 'dist/', 'dev/'),
     open: 'Google Chrome',
     port: 9000
   }
