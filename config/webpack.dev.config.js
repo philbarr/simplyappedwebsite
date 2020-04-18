@@ -1,14 +1,24 @@
 var path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 var relativeDirs = '../';
 
 module.exports = {
   mode: "development",
+  devtool: 'inline-source-map',
   entry: './src/js/index.js',
   output: {
     filename: 'bundle.js',
     path: path.resolve(__dirname, relativeDirs, 'dist'),
 
   },
+  plugins: [
+    new CleanWebpackPlugin(),
+    new HtmlWebpackPlugin({
+      title: 'Output Management',
+      template: 'src/views/index.html'
+    }),
+  ],
   module: {
     rules: [
       {
@@ -33,8 +43,8 @@ module.exports = {
     ],
   },
   devServer: {
-    contentBase: path.join(__dirname, relativeDirs, 'dist'),
-    compress: true,
+    contentBase: path.join(__dirname, 'dist'),
+    open: 'Google Chrome',
     port: 9000
   }
 };
