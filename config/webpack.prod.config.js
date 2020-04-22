@@ -20,10 +20,18 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.css$/,
+        test: /\.(html)$/,
+        use: ['html-loader']
+      },
+      {
+        test: /\.(s?)css$/i,
         use: [
+          // Creates `style` nodes from JS strings
           'style-loader',
+          // Translates CSS into CommonJS
           'css-loader',
+          // Compiles Sass to CSS
+          'sass-loader',
         ],
       },
       {
@@ -39,5 +47,10 @@ module.exports = {
         ],
       },
     ],
+  },
+  devServer: {
+    contentBase: path.join(__dirname, 'dist/', 'prod/'),
+    open: 'Google Chrome',
+    port: 9000
   }
 };

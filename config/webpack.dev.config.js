@@ -15,17 +15,24 @@ module.exports = {
   plugins: [
     new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
-      title: 'Output Management',
       template: 'src/views/index.html'
     }),
   ],
   module: {
     rules: [
       {
-        test: /\.css$/,
+        test: /\.(html)$/,
+        use: ['html-loader']
+      },
+      {
+        test: /\.(s?)css$/i,
         use: [
+          // Creates `style` nodes from JS strings
           'style-loader',
+          // Translates CSS into CommonJS
           'css-loader',
+          // Compiles Sass to CSS
+          'sass-loader',
         ],
       },
       {
