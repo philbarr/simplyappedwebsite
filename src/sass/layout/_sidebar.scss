@@ -70,6 +70,7 @@
 				border: 0;
 				color: _palette(fg-light);
 				display: block;
+				font-family: _font(family-sidebar);
 				font-size: 0.6em;
 				font-weight: _font(weight-bold);
 				letter-spacing: _font(kerning-alt);
@@ -91,26 +92,9 @@
 					width: 100%;
 				}
 
-				&:before {
+				&:hover:before {
 					background: lighten(_palette(accent2), 5);
-				}
-
-				&:after {
-					@include vendor('background-image', 'linear-gradient(to right, #{_palette(accent1)}, #{_palette(accent3)})');
-					@include vendor('transition', 'max-width #{_duration(transition)} ease');
-					max-width: 0;
-				}
-
-				&:hover {
-					color: _palette(fg);
-				}
-
-				&.active {
-					color: _palette(fg-bold);
-
-					&:after {
-						max-width: 100%;
-					}
+					@include vendor('background-image', 'linear-gradient(to left, #{_palette(accent1)}, #{_palette(bg)})');
 				}
 			}
 		}

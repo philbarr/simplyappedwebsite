@@ -16,6 +16,15 @@
 				min-height: 0;
 			}
 
+			> #bgwebsite {
+				background-image: url('../img/website.jpg');
+			}
+			> #bgapp {
+				background-image: url('../img/app.jpg');
+			}
+			> #bgbackend {
+				background-image: url('../img/backend.jpg');
+			}
 			> .image {
 				background-position: center center;
 				background-size: cover;

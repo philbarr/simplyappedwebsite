@@ -5,11 +5,13 @@
 @import 'libs/breakpoints';
 @import 'libs/html-grid';
 
-/*
-	Hyperspace by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
-*/
+// bootstrap
+@import "~bootstrap/scss/bootstrap";
+
+// font awesome
+$fa-font-path: "~@fortawesome/fontawesome-free/webfonts/";
+@import "@fortawesome/fontawesome-free/scss/fontawesome.scss";
+@import "@fortawesome/fontawesome-free/scss/solid.scss";
 
 // Breakpoints.
 
