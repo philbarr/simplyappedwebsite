@@ -1,6 +1,7 @@
 var path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const CnameWebpackPlugin = require('cname-webpack-plugin');
 var relativeDirs = '../';
 
 module.exports = {
@@ -15,6 +16,9 @@ module.exports = {
     new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
       template: 'src/views/index.html'
+    }),
+    new CnameWebpackPlugin({
+      domain: 'simplyapped.com',
     }),
   ],
   module: {
