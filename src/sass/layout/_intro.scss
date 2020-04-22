@@ -13,8 +13,16 @@
 		background-repeat: no-repeat;
 		background-size: 100% 100%;
 
+		h2 {
+			line-height: normal;
+			margin-bottom: 1em;
+		}
+		ul{
+			margin-top: 5em;;
+		}
 		p {
-			font-size: 1.25em;
+			font-size: 1em;
+			margin-bottom: 5em;
 
 			@include breakpoint('<=medium') {
 				br {
@@ -29,11 +37,6 @@
 
 		img#logo {
 			width: 50%;
-		}
-
-		ul {
-			margin-top: -1em;
-			margin-left: 1em;
 		}
 
 		@include breakpoint('<=large') {
