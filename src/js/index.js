@@ -26,6 +26,7 @@ if (browser.name == 'ie')
 $window.on('load', function() {
   window.setTimeout(function() {
     $body.removeClass('is-preload');
+    console.log('page loaded')
   }, 100);
 });
 

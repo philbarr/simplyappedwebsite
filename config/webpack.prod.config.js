@@ -9,7 +9,7 @@ module.exports = {
   mode: "production",
   entry: './src/js/index.js',
   output: {
-    filename: 'bundle.js',
+    filename: '[hash].bundle.js',
     path: path.resolve(__dirname, relativeDirs, 'dist/', 'prod/'),
 
   },
@@ -21,7 +21,10 @@ module.exports = {
     new CnameWebpackPlugin({
       domain: 'simplyapped.com',
     }),
-    new MiniCssExtractPlugin(),
+    new MiniCssExtractPlugin({
+      filename: '[name].[hash].css',
+      chunkFilename: '[id].[hash].css',
+    }),
   ],
   module: {
     rules: [

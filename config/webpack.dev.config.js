@@ -9,7 +9,7 @@ module.exports = {
   devtool: 'inline-source-map',
   entry: './src/js/index.js',
   output: {
-    filename: 'bundle.js',
+    filename: '[hash].bundle.js',
     path: path.resolve(__dirname, relativeDirs, 'dist/', 'dev/'),
 
   },
@@ -19,7 +19,8 @@ module.exports = {
       template: 'src/views/index.html'
     }),
     new MiniCssExtractPlugin({
-      filename: '[name].css',
+      filename: '[name].[hash].css',
+      chunkFilename: '[id].[hash].css',
     }),
   ],
   module: {
