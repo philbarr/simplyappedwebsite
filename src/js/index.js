@@ -3,6 +3,10 @@ import '@fortawesome/fontawesome-free/js/all'
 import $ from 'jquery'
 import breakpoints from 'breakpoints-js/dist/breakpoints.min.js'
 import './lib/scrollex'
+import smoothscroll from 'smoothscroll-polyfill';
+ 
+// do smooth scrolling if supportedn
+smoothscroll.polyfill();
 
 var	$window = $(window),
 $body = $('body'),
@@ -112,24 +116,6 @@ if ($sidebar.length > 0) {
     });
 
 }
-
-// Scrolly.
-/*
-$('.scrolly').scrolly({
-  speed: 1000,
-  offset: function() {
-
-    // If <=large, >small, and sidebar is present, use its height as the offset.
-      if (breakpoints.active('<=large')
-      &&	!breakpoints.active('<=small')
-      &&	$sidebar.length > 0)
-        return $sidebar.height();
-
-    return 0;
-
-  }
-});
-*/
 
 // Spotlights.
 $('.spotlights > section')

@@ -26,7 +26,8 @@
     "bootstrap": "^4.4.1",
     "breakpoints-js": "^1.0.6",
     "jquery": "^3.5.0",
-    "jquery.scrollex": "^0.2.1"
+    "jquery.scrollex": "^0.2.1",
+    "smoothscroll-polyfill": "^0.4.4"
   },
   "devDependencies": {
     "clean-webpack-plugin": "^3.0.0",
