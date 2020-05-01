@@ -1,7 +1,7 @@
 import '../sass/main.scss'
-import '@fortawesome/fontawesome-free/js/all'
-import $ from 'jquery'
-import breakpoints from 'breakpoints-js/dist/breakpoints.min.js'
+// import '@fortawesome/fontawesome-free/js/all' NOTE THAT FONTAWESOME IS HUGE USE ONLY THE BITS YOU NEED
+// jquery is imported using webpack externals https://webpack.js.org/configuration/externals/
+import breakpoints from 'breakpoints-js'
 import './lib/scrollex'
 import smoothscroll from 'smoothscroll-polyfill';
  

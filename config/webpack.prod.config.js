@@ -1,13 +1,21 @@
-var path = require('path');
+const path = require('path');
+const glob = require('glob');
+const CnameWebpackPlugin = require('cname-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
-const CnameWebpackPlugin = require('cname-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-var relativeDirs = '../';
+const PurgecssPlugin = require('purgecss-webpack-plugin')
+const relativeDirs = '../';
+const PATHS = {
+  src: path.join(__dirname, relativeDirs, 'src')
+}
 
 module.exports = {
   mode: "production",
   entry: './src/js/index.js',
+  externals: {
+    jquery: 'jQuery'
+  },
   output: {
     filename: '[hash].bundle.js',
     path: path.resolve(__dirname, relativeDirs, 'dist/', 'prod/'),
@@ -24,6 +32,9 @@ module.exports = {
     new MiniCssExtractPlugin({
       filename: '[name].[hash].css',
       chunkFilename: '[id].[hash].css',
+    }),
+    new PurgecssPlugin({
+      paths: glob.sync(`${PATHS.src}/**/*`,  { nodir: true }),
     }),
   ],
   module: {
